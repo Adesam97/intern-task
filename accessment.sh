@@ -8,7 +8,7 @@ sudo apt upgrade -y
 if [ $(uname -m) = x86_64 ]; then
     echo "This system is running on AMD64 (x86_64) architecture."
     curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-amd64
-elif [ $(uname -m) = aarch64 ]; then
+elif [ $(uname -m) = arch64 ]; then
     echo "This system is running on ARM64 (aarch64) architecture."
     curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-arm64
 else
