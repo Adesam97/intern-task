@@ -30,5 +30,6 @@ kubectl config view --minify --flatten > express-demo-config.yaml
 # set the KUBECONFIG environment variable 
 export KUBECONFIG=./express-demo-config.yaml
 
+cd terraform/
 terraform init
 terraform apply
