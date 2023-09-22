@@ -1,8 +1,8 @@
-#! bin/bash
+#!/bin/bash
 
 # update and upgrade system
-apt update
-apt upgrade -y
+sudo apt update
+sudo apt upgrade -y
 
 # Check the system's architecture
 if [ $(uname -m) = x86_64 ]; then
@@ -20,7 +20,7 @@ fi
 chmod +x ./kind
 sudo mv ./kind /usr/local/bin/kind
 
-# create a cluster
+# create a cluster and set config file
 kind create cluster --name express-demo
 
 kubectl config use-context kind-express-demo
