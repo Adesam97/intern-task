@@ -1,3 +1,4 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -18,17 +19,16 @@ spec:
           ports:
             - containerPort: 3000 # The port Node.js app listens on
 
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: my-node-service
-spec:
-  selector:
-    app: nodejs-app
-  ports:
-    - protocol: TCP
-      port: 3000
-      targetPort: 3000
-  type: LoadBalancer
- 
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: my-node-service
+# spec:
+#   selector:
+#     app: nodejs-app
+#   ports:
+#     - protocol: TCP
+#       port: 3000
+#       targetPort: 3000
+#   type: LoadBalancer
